@@ -1,0 +1,193 @@
+﻿<Window x:Class="EdinburghQuiz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EdinburghQuiz"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="Black" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible">
+
+    <Window.Resources>
+        <Style TargetType="StackPanel" x:Key="MultipleChoice">
+            <Setter Property="Visibility" Value="Hidden"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="TextSize">
+            <Setter Property="FontSize" Value="50"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="Question" BasedOn="{StaticResource TextSize}">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Margin" Value="5 200 5 5"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="Answer" BasedOn="{StaticResource TextSize}">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="Purple"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="10 5 10 5"/>
+            <Setter Property="MaxWidth" Value="350"/>
+            <Setter Property="MinWidth" Value="180"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+        <Style TargetType="Button" x:Key="Button">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="Purple"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <ScrollViewer>
+
+            <StackPanel HorizontalAlignment="Left" Margin="5">
+                <TextBlock Style="{DynamicResource Question}" Margin="10" FontWeight="Bold" HorizontalAlignment="Center" Text="Edinburgh History Quiz"/>
+            <TextBlock Style="{DynamicResource Question}" Text="Q1. Edinburgh residents in the 17th century believed that rubbing the burnt ashes of dove's droppings into their heads would cure what?"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="Q1MultipleChoiceButton" Style="{DynamicResource Button}" Content="Multiple Choice" Height="30" Margin="5" Click="Q1_Multiple_Choice"/>
+                <Button x:Name="Q1ShowAnswerButton" Style="{DynamicResource Button}" Content="Show Answer" Visibility="Collapsed" Height="30" Width="200" Margin="5" Click="Q1_ShowAnswer"/>
+            </StackPanel>
+            <StackPanel x:Name="Q1Multiple" Style="{DynamicResource MultipleChoice}">
+                <TextBlock Style="{DynamicResource Answer}" Text="Dandruff"/>
+                <TextBlock Style="{DynamicResource Answer}" Text="Headache"/>
+                <TextBlock x:Name="Q1Answer" Style="{DynamicResource Answer}" Text="Baldness"/>
+            </StackPanel>
+
+            <TextBlock Style="{DynamicResource Question}" Text="Q2. One of the animals at Edinburgh Zoo is Colonel in Chief and mascot for the Norwegian Royal Guard, and was knighted in 2008, what animal is he?"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="Q2MultipleChoiceButton" Style="{DynamicResource Button}" Content="Multiple Choice" Height="30" Margin="5" Click="Q2_Multiple_Choice"/>
+                <Button x:Name="Q2ShowAnswerButton" Style="{DynamicResource Button}" Content="Show Answer" Visibility="Collapsed" Height="30" Width="200" Margin="5" Click="Q2_ShowAnswer"/>
+            </StackPanel>
+            <StackPanel x:Name="Q2Multiple" Style="{DynamicResource MultipleChoice}">
+                <TextBlock Style="{DynamicResource Answer}" Text="A Tiger"/>
+                <TextBlock Style="{DynamicResource Answer}" Text="A Stag"/>
+                <TextBlock x:Name="Q2Answer" Style="{DynamicResource Answer}" Text="A Penguin"/>
+            </StackPanel>
+            
+            <TextBlock Style="{DynamicResource Question}" Text="Q3. Elaine Davidson lives in Edinburgh, she's in the Guinness Book of Records as having the most what?"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="Q3MultipleChoiceButton" Style="{DynamicResource Button}" Content="Multiple Choice" Height="30" Margin="5" Click="Q3_Multiple_Choice"/>
+                <Button x:Name="Q3ShowAnswerButton" Style="{DynamicResource Button}" Content="Show Answer" Visibility="Collapsed" Height="30" Width="200" Margin="5" Click="Q3_ShowAnswer"/>
+            </StackPanel>
+            <StackPanel x:Name="Q3Multiple" Style="{DynamicResource MultipleChoice}">
+                <TextBlock Style="{DynamicResource Answer}" Text="Cats"/>
+                <TextBlock Style="{DynamicResource Answer}" Text="Divorces"/>
+                <TextBlock x:Name="Q3Answer" Style="{DynamicResource Answer}" Text="Piercings"/>
+            </StackPanel>
+            
+            <TextBlock Style="{DynamicResource Question}" Text="Q4. What are the names of the Omni Centre Giraffes?"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="Q4MultipleChoiceButton" Style="{DynamicResource Button}" Content="Multiple Choice" Height="30" Margin="5" Click="Q4_Multiple_Choice"/>
+                <Button x:Name="Q4ShowAnswerButton" Style="{DynamicResource Button}" Content="Show Answer" Visibility="Collapsed" Height="30" Width="200" Margin="5" Click="Q4_ShowAnswer"/>
+            </StackPanel>
+            <StackPanel x:Name="Q4Multiple" Style="{DynamicResource MultipleChoice}">
+                <TextBlock Style="{DynamicResource Answer}" Text="Katie and Cliff"/>
+                <TextBlock Style="{DynamicResource Answer}" Text="Murray and Beatrice"/>
+                <TextBlock x:Name="Q4Answer" Style="{DynamicResource Answer}" Text="Martha and Gilbert"/>
+            </StackPanel>
+
+            <TextBlock Style="{DynamicResource Question}" Text="Q5. The Manuscript of Monte Cassino is a series of scultures at Picardy place referencing an Italian battle in World War 2. They were created by which Edinburgh born artist?"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="Q5MultipleChoiceButton" Style="{DynamicResource Button}" Content="Multiple Choice" Height="30" Margin="5" Click="Q5_Multiple_Choice"/>
+                <Button x:Name="Q5ShowAnswerButton" Style="{DynamicResource Button}" Content="Show Answer" Visibility="Collapsed" Height="30" Width="200" Margin="5" Click="Q5_ShowAnswer"/>
+            </StackPanel>
+            <StackPanel x:Name="Q5Multiple" Style="{DynamicResource MultipleChoice}">
+                <TextBlock x:Name="Q5Answer" Style="{DynamicResource Answer}" Text="Edouardo Paolozzi"/>
+                <TextBlock Style="{DynamicResource Answer}" Text="Charles Rennie MacKintosh"/>
+                <TextBlock Style="{DynamicResource Answer}" Text="John Byrne"/>
+            </StackPanel>
+
+            <TextBlock Style="{DynamicResource Question}" Text="Q6. Wojtek (Voytek) was someone who was involved in the battle of Monte Cassino, and worked his way up to Colonel in the Polish army, after the war he lived the rest of his life in Edinburgh, what was unusual about Wojtek?"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="Q6MultipleChoiceButton" Style="{DynamicResource Button}" Content="Multiple Choice" Height="30" Margin="5" Click="Q6_Multiple_Choice"/>
+                <Button x:Name="Q6ShowAnswerButton" Style="{DynamicResource Button}" Content="Show Answer" Visibility="Collapsed" Height="30" Width="200" Margin="5" Click="Q6_ShowAnswer"/>
+            </StackPanel>
+            <StackPanel x:Name="Q6Multiple" Style="{DynamicResource MultipleChoice}">
+
+                <TextBlock x:Name="Q6Answer" Style="{DynamicResource Answer}" Text="He was a bear"/>
+                <TextBlock Style="{DynamicResource Answer}" Text="He had 3 legs"/>
+                <TextBlock Style="{DynamicResource Answer}" Text="He was a doll"/>
+            </StackPanel>
+            
+            <TextBlock Style="{DynamicResource Question}" Text="Q7. JK Rowling took a few characters' names from gravestones in Edinburgh, but which Charles Dickens character was inspired by a gravestone in Edinburgh?"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="Q7MultipleChoiceButton" Style="{DynamicResource Button}" Content="Multiple Choice" Height="30" Margin="5" Click="Q7_Multiple_Choice"/>
+                <Button x:Name="Q7ShowAnswerButton" Style="{DynamicResource Button}" Content="Show Answer" Visibility="Collapsed" Height="30" Width="200" Margin="5" Click="Q7_ShowAnswer"/>
+            </StackPanel>
+            <StackPanel x:Name="Q7Multiple" Style="{DynamicResource MultipleChoice}">
+                <TextBlock Style="{DynamicResource Answer}" Text="Oliver Twist"/>
+                <TextBlock x:Name="Q7Answer" Style="{DynamicResource Answer}" Text="Ebeneezer Scrooge"/>
+                <TextBlock Style="{DynamicResource Answer}" Text="Nicholas Nickelby"/>
+            </StackPanel>
+
+            <TextBlock Style="{DynamicResource Question}" Text="Q8. What used to be where Princes St Gardens is now?"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="Q8MultipleChoiceButton" Style="{DynamicResource Button}" Content="Multiple Choice" Height="30" Margin="5" Click="Q8_Multiple_Choice"/>
+                <Button x:Name="Q8ShowAnswerButton" Style="{DynamicResource Button}" Content="Show Answer" Visibility="Collapsed" Height="30" Width="200" Margin="5" Click="Q8_ShowAnswer"/>
+            </StackPanel>
+            <StackPanel x:Name="Q8Multiple" Style="{DynamicResource MultipleChoice}">
+                <TextBlock Style="{DynamicResource Answer}" Text="A Golf Course"/>
+                <TextBlock x:Name="Q8Answer" Style="{DynamicResource Answer}" Text="A Loch"/>
+                <TextBlock Style="{DynamicResource Answer}" Text="A Graveyard"/>
+            </StackPanel>
+
+            <TextBlock Style="{DynamicResource Question}" Text="Q9. There's a festival held every year on Calton Hill which celebrates the wedding procession of the May Queen and the Green Man. What is it called?"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="Q9MultipleChoiceButton" Style="{DynamicResource Button}" Content="Multiple Choice" Height="30" Margin="5" Click="Q9_Multiple_Choice"/>
+                <Button x:Name="Q9ShowAnswerButton" Style="{DynamicResource Button}" Content="Show Answer" Visibility="Collapsed" Height="30" Width="200" Margin="5" Click="Q9_ShowAnswer"/>
+            </StackPanel>
+            <StackPanel x:Name="Q9Multiple" Style="{DynamicResource MultipleChoice}">
+                <TextBlock Style="{DynamicResource Answer}" Text="Oestre"/>
+                <TextBlock Style="{DynamicResource Answer}" Text="Samhain"/>
+                <TextBlock x:Name="Q9Answer" Style="{DynamicResource Answer}" Text="Beltane"/>
+            </StackPanel>
+            
+            <TextBlock Style="{DynamicResource Question}" Text="Q10. In 1705 the Edinburgh courts got a complaint from a Baker, who owned a bakery near Fishmarket Close. The complaint was about his Dutch neighbour upstairs, who was keeping what in his flat?"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="Q10MultipleChoiceButton" Style="{DynamicResource Button}" Content="Multiple Choice" Height="30" Margin="5" Click="Q10_Multiple_Choice"/>
+                <Button x:Name="Q10ShowAnswerButton" Style="{DynamicResource Button}" Content="Show Answer" Visibility="Collapsed" Height="30" Width="200" Margin="5" Click="Q10_ShowAnswer"/>
+            </StackPanel>
+            <StackPanel x:Name="Q10Multiple" Style="{DynamicResource MultipleChoice}">
+                <TextBlock Style="{DynamicResource Answer}" Text="A cannabis farm"/>
+                <TextBlock Style="{DynamicResource Answer}" Text="Over 200 cats"/>
+                <TextBlock x:Name="Q10Answer" Style="{DynamicResource Answer}" Text="An Elephant"/>
+            </StackPanel>
+            <TextBlock Style="{DynamicResource Question}" Text="Q11. What is rumoured to happen to Edinburgh University students if they enter Edinburgh Castle?"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="Q11MultipleChoiceButton" Style="{DynamicResource Button}" Content="Multiple Choice" Height="30" Margin="5" Click="Q11_Multiple_Choice"/>
+                <Button x:Name="Q11ShowAnswerButton" Style="{DynamicResource Button}" Content="Show Answer" Visibility="Collapsed" Height="30" Width="200" Margin="5" Click="Q11_ShowAnswer"/>
+            </StackPanel>
+            <StackPanel x:Name="Q11Multiple" Style="{DynamicResource MultipleChoice}">
+                <TextBlock Style="{DynamicResource Answer}" Text="They'll get ill"/>
+                <TextBlock x:Name="Q11Answer" Style="{DynamicResource Answer}" Text="They'll fail their exams"/>
+                <TextBlock Style="{DynamicResource Answer}" Text="They'll pass all their exams"/>
+            </StackPanel>
+            
+            <TextBlock Style="{DynamicResource Question}" Text="Q12. There's a statue of Greyfriar's Bobby in Edinburgh, but the US also has a statue of Bobby, which state is it in?"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="Q12MultipleChoiceButton" Style="{DynamicResource Button}" Content="Multiple Choice" Height="30" Margin="5" Click="Q12_Multiple_Choice"/>
+                <Button x:Name="Q12ShowAnswerButton" Style="{DynamicResource Button}" Content="Show Answer" Visibility="Collapsed" Height="30" Width="200" Margin="5" Click="Q12_ShowAnswer"/>
+            </StackPanel>
+            <StackPanel x:Name="Q12Multiple" Style="{DynamicResource MultipleChoice}">
+                <TextBlock Style="{DynamicResource Answer}" Text="New York"/>
+                <TextBlock Style="{DynamicResource Answer}" Text="Tennessee"/>
+                <TextBlock x:Name="Q12Answer" Style="{DynamicResource Answer}" Text="California"/>
+            </StackPanel>
+
+            <TextBlock Style="{DynamicResource Question}" Text="Q13. We have a statue dog that's famous in his hometown in that state, what was his name?"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="Q13MultipleChoiceButton" Style="{DynamicResource Button}" Content="Multiple Choice" Height="30" Margin="5" Click="Q13_Multiple_Choice"/>
+                <Button x:Name="Q13ShowAnswerButton" Style="{DynamicResource Button}" Content="Show Answer" Visibility="Collapsed" Height="30" Width="200" Margin="5" Click="Q13_ShowAnswer"/>
+            </StackPanel>
+            <StackPanel x:Name="Q13Multiple" Style="{DynamicResource MultipleChoice}">
+                <TextBlock Style="{DynamicResource Answer}" Text="Poo"/>
+                <TextBlock x:Name="Q13Answer" Style="{DynamicResource Answer}" Text="Bum"/>
+                <TextBlock Style="{DynamicResource Answer}" Text="Wee Wee"/>
+            </StackPanel>
+
+            <TextBlock Style="{DynamicResource Question}" Text="Q14. Burke and Hare are known for being famous Edinburgh Graverobbers, How many graves did they rob?"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Button x:Name="Q14ShowAnswerButton" Style="{DynamicResource Button}" Content="Show Answer" Visibility="Collapsed" Height="30" Width="200" Margin="5" Click="Q14_ShowAnswer"/>
+            </StackPanel>
+                <TextBlock x:Name="Q14Answer" Style="{DynamicResource Answer}" Visibility="Hidden" Text="None, they just killed people and sold the bodies."/>
+                <Button x:Name="ShowAnswerButtonsButton" Content="Show Answer Buttons" Click="Show_Answer_Buttons"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
